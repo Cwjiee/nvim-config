@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/weijie/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["fern.vim"] = {
+    loaded = true,
+    path = "/home/weijie/.local/share/nvim/site/pack/packer/start/fern.vim",
+    url = "https://github.com/lambdalisue/fern.vim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/weijie/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -140,6 +145,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/weijie/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/weijie/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use "olimorris/onedarkpro.nvim"
+  use 'navarasu/onedark.nvim'
   use "tpope/vim-fugitive"
   use {
 	  'VonHeikemen/lsp-zero.nvim',

@@ -131,10 +131,10 @@ _G.packer_plugins = {
     path = "/home/weijie/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
-  ["onedarkpro.nvim"] = {
+  ["onedark.nvim"] = {
     loaded = true,
-    path = "/home/weijie/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
-    url = "https://github.com/olimorris/onedarkpro.nvim"
+    path = "/home/weijie/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

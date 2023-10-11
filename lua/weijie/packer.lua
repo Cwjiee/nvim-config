@@ -46,5 +46,8 @@ return require('packer').startup(function(use)
   use { "lewis6991/gitsigns.nvim" }
   use { "lambdalisue/fern.vim" } 
   use 'andweeb/presence.nvim'
-  
+  use {'vim-airline/vim-airline'}  
+  use {'nvim-tree/nvim-tree.lua'}
+  use {'nvim-tree/nvim-web-devicons'}
+  use 'prichrd/netrw.nvim'
 end)

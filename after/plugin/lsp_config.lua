@@ -7,21 +7,33 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-
-require('lspconfig').gopls.setup({
-	cmd = {"gopls"},
-	filetypes = {"go", "gomod", "gowork", "gotmpl" },
-	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-	settings = {
-		gopls = {
-			completeUnimported = true,
-			usePlaceholders = true,
-			analyses = {
-				unusedparams = true,
-			},
-		}
+require('mason').setup({})
+require('mason-lspconfig').setup({
+	ensure_installed = {'gopls', 'rubocop', 'solargraph'},
+	handlers = {
+		lsp_zero.default_setup,
+		gopls = function()
+			require('lspconfig').gopls.setup({
+				cmd = {"gopls"},
+				filetypes = {"go", "gomod", "gowork", "gotmpl" },
+				root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+				settings = {
+					gopls = {
+						completeUnimported = true,
+						usePlaceholders = true,
+						analyses = {
+							unusedparams = true,
+						},
+					}
+				}
+			})
+		end,
+		solargraph = function()
+			require('lspconfig').solargraph.setup({})
+		end,
 	}
 })
+			
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()

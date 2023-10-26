@@ -42,13 +42,21 @@ return require('packer').startup(function(use)
 	  after = "nvim-treesitter",
 	  requires = "nvim-treesitter/nvim-treesitter",
   })
- 
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
   use { "lewis6991/gitsigns.nvim" }
   use { "lambdalisue/fern.vim" } 
   use 'andweeb/presence.nvim'
   use {'vim-airline/vim-airline'}  
-  use {'nvim-tree/nvim-tree.lua'}
-  use {'nvim-tree/nvim-web-devicons'}
+  -- use {'nvim-tree/nvim-tree.lua'}
+  -- use {'nvim-tree/nvim-web-devicons'}
+  -- use 'preservim/nerdtree'
   use 'prichrd/netrw.nvim'
   use 'ThePrimeagen/harpoon'
+  use 'tpope/vim-rails'
+  use 'tpope/vim-endwise'
+  use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-autopairs'
 end)

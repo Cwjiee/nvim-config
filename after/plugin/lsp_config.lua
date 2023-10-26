@@ -9,7 +9,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = {'gopls', 'rubocop', 'solargraph'},
+	ensure_installed = {'gopls', 'eslint'},
 	handlers = {
 		lsp_zero.default_setup,
 		gopls = function()
@@ -30,6 +30,51 @@ require('mason-lspconfig').setup({
 		end,
 		solargraph = function()
 			require('lspconfig').solargraph.setup({})
+		end,
+		tsserver = function()
+			require('lspconfig').tsserver.setup({
+				filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "svelte" },
+				settings = {
+					typescript = {
+						inlayHints = {
+							includeInlayParameterNameHints = "literal",
+							includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+							includeInlayFunctionParameterTypeHints = false,
+							includeInlayVariableTypeHints = false,
+							includeInlayPropertyDeclarationTypeHints = false,
+							includeInlayFunctionLikeReturnTypeHints = true,
+							includeInlayEnumMemberValueHints = true,
+						},
+					},
+					javascript = {
+						inlayHints = {
+							includeInlayParameterNameHints = "all",
+							includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+							includeInlayFunctionParameterTypeHints = true,
+							includeInlayVariableTypeHints = true,
+							includeInlayPropertyDeclarationTypeHints = true,
+							includeInlayFunctionLikeReturnTypeHints = true,
+							includeInlayEnumMemberValueHints = true,
+						},
+					},
+				},
+			})
+		end,
+		tailwindcss = function() 
+			require('lspconfig').tailwindcss.setup({
+				settings = {
+					tailwindCSS = {
+						experimental = {
+							classRegex = {
+								{ "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+							},
+						},
+					},
+				},
+			})
+		end,
+		svelte = function()
+			require('lspconfig').svelte.setup({})
 		end,
 	}
 })

@@ -1,6 +1,6 @@
 require('onedark').setup {
 	style = 'deep',
-	transparent = false,
+	transparent = true,
 	term_colors = true,
 }
 

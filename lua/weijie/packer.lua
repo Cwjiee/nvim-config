@@ -56,4 +56,5 @@ return require('packer').startup(function(use)
   use 'tpope/vim-endwise'
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
+  use 'fatih/vim-go'
 end)

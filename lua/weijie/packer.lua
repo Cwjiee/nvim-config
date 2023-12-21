@@ -57,4 +57,5 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
   use 'fatih/vim-go'
+  use 'eandrju/cellular-automaton.nvim'
 end)

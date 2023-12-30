@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/weijie/.local/share/nvim/site/pack/packer/start/fern.vim",
     url = "https://github.com/lambdalisue/fern.vim"
   },
+  ["fine-cmdline.nvim"] = {
+    loaded = true,
+    path = "/home/weijie/.local/share/nvim/site/pack/packer/start/fine-cmdline.nvim",
+    url = "https://github.com/VonHeikemen/fine-cmdline.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/weijie/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -123,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/weijie/.local/share/nvim/site/pack/packer/start/netrw.nvim",
     url = "https://github.com/prichrd/netrw.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/weijie/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -181,10 +191,20 @@ _G.packer_plugins = {
     path = "/home/weijie/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tmuxline.vim"] = {
+    loaded = true,
+    path = "/home/weijie/.local/share/nvim/site/pack/packer/start/tmuxline.vim",
+    url = "https://github.com/edkolev/tmuxline.vim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/weijie/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/home/weijie/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
   },
   ["vim-endwise"] = {
     loaded = true,

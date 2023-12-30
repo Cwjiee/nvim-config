@@ -46,7 +46,8 @@ return require('packer').startup(function(use)
   use { "lewis6991/gitsigns.nvim" }
   use { "lambdalisue/fern.vim" } 
   use 'andweeb/presence.nvim'
-  use {'vim-airline/vim-airline'}  
+  use 'vim-airline/vim-airline'  
+  use 'vim-airline/vim-airline-themes' 
   -- use {'nvim-tree/nvim-tree.lua'}
   -- use {'nvim-tree/nvim-web-devicons'}
   -- use 'preservim/nerdtree'
@@ -58,4 +59,12 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'fatih/vim-go'
   use 'eandrju/cellular-automaton.nvim'
+  use 'edkolev/tmuxline.vim'
+
+  use {
+    'VonHeikemen/fine-cmdline.nvim',
+    requires = {
+      {'MunifTanjim/nui.nvim'}
+    }
+  }
 end)

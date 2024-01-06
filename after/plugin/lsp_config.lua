@@ -9,7 +9,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = {'gopls', 'eslint'},
+	ensure_installed = {'eslint'},
 	handlers = {
 		lsp_zero.default_setup,
 		gopls = function()

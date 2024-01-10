@@ -48,8 +48,8 @@ return require('packer').startup(function(use)
   use 'andweeb/presence.nvim'
   -- use 'vim-airline/vim-airline'  
   -- use 'vim-airline/vim-airline-themes' 
-  -- use {'nvim-tree/nvim-tree.lua'}
-  -- use {'nvim-tree/nvim-web-devicons'}
+  use {'nvim-tree/nvim-tree.lua'}
+  use {'nvim-tree/nvim-web-devicons'}
   -- use 'preservim/nerdtree'
   use 'prichrd/netrw.nvim'
   use 'ThePrimeagen/harpoon'

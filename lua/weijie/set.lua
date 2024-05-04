@@ -1,4 +1,3 @@
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -18,3 +17,6 @@ vim.opt.updatetime = 50
 vim.opt.wrap = false
 
 vim.g.mapleader = " "
+vim.g.rubycomplete_buffer_loading = 1
+vim.g.rubycomplete_classes_in_global = 1
+vim.g.rubycomplete_rails = 1

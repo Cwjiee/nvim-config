@@ -12,12 +12,10 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  
+  use "nvim-lua/plenary.nvim"
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use { "catppuccin/nvim", as = "catppuccin" }
@@ -51,16 +49,16 @@ return require('packer').startup(function(use)
   })
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
   use { "lewis6991/gitsigns.nvim" }
-  use { "lambdalisue/fern.vim" } 
   -- use 'andweeb/presence.nvim'
-  -- use 'vim-airline/vim-airline'  
-  -- use 'vim-airline/vim-airline-themes' 
-  use {'nvim-tree/nvim-tree.lua'}
   use {'nvim-tree/nvim-web-devicons'}
   -- use 'preservim/nerdtree'
   use 'prichrd/netrw.nvim'
-  use 'ThePrimeagen/harpoon'
-  use 'tpope/vim-rails'
+  -- use 'tpope/vim-rails
+  use {
+      "ThePrimeagen/harpoon",
+      branch = "harpoon2",
+      requires = { {"nvim-lua/plenary.nvim"}, {'nvim-telescope/telescope.nvim'} }
+  }
   use 'tpope/vim-endwise'
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
@@ -84,5 +82,5 @@ return require('packer').startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+--   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)

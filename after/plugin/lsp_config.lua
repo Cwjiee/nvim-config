@@ -9,76 +9,76 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = {'eslint'},
-	handlers = {
-		lsp_zero.default_setup,
-		gopls = function()
-			require('lspconfig').gopls.setup({
-				cmd = {"gopls"},
-				filetypes = {"go", "gomod", "gowork", "gotmpl" },
-				root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-				settings = {
-					gopls = {
-						completeUnimported = true,
-						usePlaceholders = true,
-						analyses = {
-							unusedparams = true,
-						},
-					}
-				}
-			})
-		end,
-		solargraph = function()
-			require('lspconfig').solargraph.setup({})
-		end,
-		tsserver = function()
-			require('lspconfig').tsserver.setup({
-				filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "svelte" },
-				settings = {
-					typescript = {
-						inlayHints = {
-							includeInlayParameterNameHints = "literal",
-							includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-							includeInlayFunctionParameterTypeHints = false,
-							includeInlayVariableTypeHints = false,
-							includeInlayPropertyDeclarationTypeHints = false,
-							includeInlayFunctionLikeReturnTypeHints = true,
-							includeInlayEnumMemberValueHints = true,
-						},
-					},
-					javascript = {
-						inlayHints = {
-							includeInlayParameterNameHints = "all",
-							includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-							includeInlayFunctionParameterTypeHints = true,
-							includeInlayVariableTypeHints = true,
-							includeInlayPropertyDeclarationTypeHints = true,
-							includeInlayFunctionLikeReturnTypeHints = true,
-							includeInlayEnumMemberValueHints = true,
-						},
-					},
-				},
-			})
-		end,
-		tailwindcss = function() 
-			require('lspconfig').tailwindcss.setup({
-				settings = {
-					tailwindCSS = {
-						experimental = {
-							classRegex = {
-								{ "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
-							},
-						},
-					},
-				},
-			})
-		end,
-		svelte = function()
-			require('lspconfig').svelte.setup({})
-		end,
-	}
+  ensure_installed = {'eslint'},
+  handlers = {
+    lsp_zero.default_setup,
+    gopls = function()
+      require('lspconfig').gopls.setup({
+        cmd = {"gopls"},
+        filetypes = {"go", "gomod", "gowork", "gotmpl" },
+        root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+        settings = {
+          gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+              unusedparams = true,
+            },
+          }
+        }
+      })
+    end,
+    solargraph = function()
+      require('lspconfig').solargraph.setup({})
+    end,
+    tsserver = function()
+      require('lspconfig').tsserver.setup({
+        filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "svelte" },
+        settings = {
+          typescript = {
+            inlayHints = {
+              includeInlayParameterNameHints = "literal",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayFunctionParameterTypeHints = false,
+              includeInlayVariableTypeHints = false,
+              includeInlayPropertyDeclarationTypeHints = false,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayEnumMemberValueHints = true,
+            },
+          },
+          javascript = {
+            inlayHints = {
+              includeInlayParameterNameHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayVariableTypeHints = true,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayEnumMemberValueHints = true,
+            },
+          },
+        },
+      })
+    end,
+    tailwindcss = function() 
+      require('lspconfig').tailwindcss.setup({
+        settings = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = {
+                { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+              },
+            },
+          },
+        },
+      })
+    end,
+    svelte = function()
+      require('lspconfig').svelte.setup({})
+    end,
+  }
 })
-			
+
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()

@@ -9,7 +9,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'eslint'},
+  ensure_installed = {'eslint', 'gopls', 'ruby_lsp', 'standardrb'},
   handlers = {
     lsp_zero.default_setup,
     gopls = function()
@@ -28,8 +28,15 @@ require('mason-lspconfig').setup({
         }
       })
     end,
-    solargraph = function()
-      require('lspconfig').solargraph.setup({})
+    ruby_lsp = function()
+      require('lspconfig').ruby_lsp.setup({
+        init_options = {
+          formatter = 'none',
+        },
+      })
+    end,
+    standardrb = function()
+      require('lspconfig').standardrb.setup({})
     end,
     tsserver = function()
       require('lspconfig').tsserver.setup({

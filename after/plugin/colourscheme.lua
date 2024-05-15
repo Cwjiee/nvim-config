@@ -1,7 +1,7 @@
 require("catppuccin").setup({
-    flavour = "frappe",
-    transparent_background = true, -- disables setting the background color.
-    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+    flavour = "mocha",
+    transparent_background = true,
+    term_colors = false,
 })
 
 vim.cmd.colorscheme "catppuccin"

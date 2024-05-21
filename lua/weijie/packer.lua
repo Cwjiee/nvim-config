@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
   use 'folke/zen-mode.nvim'
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use "lewis6991/gitsigns.nvim"
-  use 'andweeb/presence.nvim'
+  -- use 'andweeb/presence.nvim'
   use 'nvim-tree/nvim-web-devicons'
   use 'prichrd/netrw.nvim'
   use 'tpope/vim-endwise'

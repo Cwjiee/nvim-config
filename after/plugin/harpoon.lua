@@ -1,9 +1,11 @@
 local harpoon = require("harpoon")
+local extensions = require("harpoon.extensions")
 harpoon:setup({
   settings = {
     save_on_toggle = true
   }
 })
+harpoon:extend(extensions.builtins.navigate_with_number());
 
 vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
 vim.keymap.set("n", "<leader>e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)

@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
   use "lewis6991/gitsigns.nvim"
   -- use 'andweeb/presence.nvim'
   use 'nvim-tree/nvim-web-devicons'
-  use 'prichrd/netrw.nvim'
   use 'tpope/vim-endwise'
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
@@ -28,6 +27,12 @@ return require('packer').startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   use "tpope/vim-fugitive"
   use 'lervag/vimtex'
+  use({
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup()
+    end,
+  })
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.3',

@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["netrw.nvim"] = {
-    loaded = true,
-    path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/netrw.nvim",
-    url = "https://github.com/prichrd/netrw.nvim"
-  },
   ["nui.nvim"] = {
     loaded = true,
     path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/nui.nvim",
@@ -180,6 +175,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["oil.nvim"] = {
+    config = { "\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0" },
+    loaded = true,
+    path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    url = "https://github.com/stevearc/oil.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -224,6 +225,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: oil.nvim
+time([[Config for oil.nvim]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0", "config", "oil.nvim")
+time([[Config for oil.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

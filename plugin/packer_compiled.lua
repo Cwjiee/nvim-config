@@ -211,6 +211,11 @@ _G.packer_plugins = {
     path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
   },
+  vimtex = {
+    loaded = true,
+    path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",

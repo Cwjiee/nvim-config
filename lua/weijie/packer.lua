@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
   use 'eandrju/cellular-automaton.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
   use "tpope/vim-fugitive"
+  use 'lervag/vimtex'
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.3',

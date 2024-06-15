@@ -1,7 +1,7 @@
-require('fine-cmdline').setup({
-  popup = {
-    size = {
-      width = '30%',
-    },
-  }
-})
+-- require('fine-cmdline').setup({
+--   popup = {
+--     size = {
+--       width = '30%',
+--     },
+--   }
+-- })

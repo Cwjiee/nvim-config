@@ -66,12 +66,12 @@ return require('packer').startup(function(use)
     requires = { {"nvim-lua/plenary.nvim"}, {'nvim-telescope/telescope.nvim'} }
   }
 
-  use {
-    'VonHeikemen/fine-cmdline.nvim',
-    requires = {
-      {'MunifTanjim/nui.nvim'}
-    }
-  }
+--   use {
+--     'VonHeikemen/fine-cmdline.nvim',
+--     requires = {
+--       {'MunifTanjim/nui.nvim'}
+--     }
+--   }
 
   use {
     'nvim-lualine/lualine.nvim',

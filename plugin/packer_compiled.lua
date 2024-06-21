@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -201,6 +206,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
+  },
+  ["vim-kitty"] = {
+    loaded = true,
+    path = "/Users/weijie/.local/share/nvim/site/pack/packer/start/vim-kitty",
+    url = "https://github.com/fladson/vim-kitty"
   },
   vimtex = {
     loaded = true,

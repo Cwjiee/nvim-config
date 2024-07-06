@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   use "tpope/vim-fugitive"
   use 'lervag/vimtex'
   use 'fladson/vim-kitty'
+  use 'folke/flash.nvim'
   use({
     "stevearc/oil.nvim",
     config = function()

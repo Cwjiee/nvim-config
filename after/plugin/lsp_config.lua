@@ -33,7 +33,7 @@ require('mason-lspconfig').setup({
     end,
     tsserver = function()
       require('lspconfig').tsserver.setup({
-        filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "svelte" },
+        filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
         settings = {
           typescript = {
             inlayHints = {

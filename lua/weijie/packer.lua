@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   use 'lervag/vimtex'
   use 'fladson/vim-kitty'
   use 'folke/flash.nvim'
+  use 'norcalli/nvim-colorizer.lua'
   use({
     "stevearc/oil.nvim",
     config = function()

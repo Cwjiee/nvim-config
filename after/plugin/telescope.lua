@@ -10,7 +10,7 @@ require('telescope').setup{
 
       },
     },
-    sorting_strategy = "ascending"
+    -- sorting_strategy = "ascending"
   },
 }
 

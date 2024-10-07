@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
   use 'fladson/vim-kitty'
   use 'folke/flash.nvim'
   use 'norcalli/nvim-colorizer.lua'
+  use 'rcarriga/nvim-notify'
   use({
     "stevearc/oil.nvim",
     config = function()
@@ -85,7 +86,6 @@ return require('packer').startup(function(use)
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   }
-  --   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   
   use {
     "kdheepak/lazygit.nvim",
@@ -93,4 +93,22 @@ return require('packer').startup(function(use)
       "nvim-lua/plenary.nvim",
     },
   }
+
+  use({
+    "epwalsh/obsidian.nvim",
+    tag = "*",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("obsidian").setup({
+        workspaces = {
+          {
+            name = "personal",
+            path = "~/Documents/obsidian/main",
+          },
+        },
+      })
+    end,
+  })
 end)

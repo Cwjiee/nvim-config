@@ -20,3 +20,7 @@ vim.g.mapleader = " "
 vim.g.rubycomplete_buffer_loading = 1
 vim.g.rubycomplete_classes_in_global = 1
 vim.g.rubycomplete_rails = 1
+
+-- vim.notify = require("notify").setup({
+--   background_color = "#e2e2e2"
+-- })

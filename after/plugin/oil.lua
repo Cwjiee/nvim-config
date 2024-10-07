@@ -1,3 +1,5 @@
+local detail = true
+
 require("oil").setup({
   skip_confirm_for_simple_edits = true,
   prompt_save_on_select_new_entry = false,
@@ -10,4 +12,8 @@ require("oil").setup({
       return vim.startswith(name, "..")
     end,
   },
+  columns = {
+    "icon",
+    "permissions",
+  }
 })

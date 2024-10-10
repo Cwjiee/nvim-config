@@ -8,6 +8,7 @@ vim.opt.softtabstop = 2
 vim.opt.smartindent = true
 
 vim.opt.termguicolors = true
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"

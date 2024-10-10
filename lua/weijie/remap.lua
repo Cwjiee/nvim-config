@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>-", "<cmd>lua require('oil').open_float('.')<CR>", { noremap = true, silent = true })
 
 -- move visual content up/down
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

@@ -17,12 +17,12 @@ return require('packer').startup(function(use)
   use 'folke/zen-mode.nvim'
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use "lewis6991/gitsigns.nvim"
-  -- use 'andweeb/presence.nvim'
+  use 'andweeb/presence.nvim'
   use 'nvim-tree/nvim-web-devicons'
   use 'tpope/vim-endwise'
   use 'windwp/nvim-ts-autotag'
-  use 'windwp/nvim-autopairs'
-  use 'fatih/vim-go'
+  use 'windwp/nvim-autopairs' 
+  -- use 'fatih/vim-go'
   use 'eandrju/cellular-automaton.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
   use "tpope/vim-fugitive"
@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
   use 'folke/flash.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'rcarriga/nvim-notify'
+  use 'christoomey/vim-tmux-navigator'
   use({
     "stevearc/oil.nvim",
     config = function()

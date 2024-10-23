@@ -9,7 +9,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'eslint', 'gopls'},-- , 'standardrb'},
+  -- ensure_installed = {'eslint', 'gopls'},-- , 'standardrb'},
   handlers = {
     lsp_zero.default_setup,
     gopls = function()
@@ -31,35 +31,35 @@ require('mason-lspconfig').setup({
     standardrb = function()
       require('lspconfig').standardrb.setup({})
     end,
-    tsserver = function()
-      require('lspconfig').tsserver.setup({
-        filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-        settings = {
-          typescript = {
-            inlayHints = {
-              includeInlayParameterNameHints = "literal",
-              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-              includeInlayFunctionParameterTypeHints = false,
-              includeInlayVariableTypeHints = false,
-              includeInlayPropertyDeclarationTypeHints = false,
-              includeInlayFunctionLikeReturnTypeHints = true,
-              includeInlayEnumMemberValueHints = true,
-            },
-          },
-          javascript = {
-            inlayHints = {
-              includeInlayParameterNameHints = "all",
-              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-              includeInlayFunctionParameterTypeHints = true,
-              includeInlayVariableTypeHints = true,
-              includeInlayPropertyDeclarationTypeHints = true,
-              includeInlayFunctionLikeReturnTypeHints = true,
-              includeInlayEnumMemberValueHints = true,
-            },
-          },
-        },
-      })
-    end,
+    -- tsserver = function()
+    --   require('lspconfig').tsserver.setup({
+    --     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+    --     settings = {
+    --       typescript = {
+    --         inlayHints = {
+    --           includeInlayParameterNameHints = "literal",
+    --           includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+    --           includeInlayFunctionParameterTypeHints = false,
+    --           includeInlayVariableTypeHints = false,
+    --           includeInlayPropertyDeclarationTypeHints = false,
+    --           includeInlayFunctionLikeReturnTypeHints = true,
+    --           includeInlayEnumMemberValueHints = true,
+    --         },
+    --       },
+    --       javascript = {
+    --         inlayHints = {
+    --           includeInlayParameterNameHints = "all",
+    --           includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+    --           includeInlayFunctionParameterTypeHints = true,
+    --           includeInlayVariableTypeHints = true,
+    --           includeInlayPropertyDeclarationTypeHints = true,
+    --           includeInlayFunctionLikeReturnTypeHints = true,
+    --           includeInlayEnumMemberValueHints = true,
+    --         },
+    --       },
+    --     },
+    --   })
+    -- end,
     tailwindcss = function() 
       require('lspconfig').tailwindcss.setup({
         settings = {
@@ -79,6 +79,16 @@ require('mason-lspconfig').setup({
   }
 })
 
+local nvim_lsp = require("lspconfig")
+nvim_lsp.nixd.setup({
+   settings = {
+      nixd = {
+         formatting = {
+            command = { "nixfmt" },
+         },
+      },
+   },
+})
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()

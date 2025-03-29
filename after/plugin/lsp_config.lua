@@ -76,6 +76,11 @@ require('mason-lspconfig').setup({
     svelte = function()
       require('lspconfig').svelte.setup({})
     end,
+    jdtls = function()
+      require'lspconfig'.jdtls.setup{
+        cmd = { '/Users/weijie/.local/share/nvim/mason/bin/jdtls' },
+      }
+    end,
   }
 })
 

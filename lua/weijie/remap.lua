@@ -27,3 +27,4 @@ vim.api.nvim_set_keymap('n', '<leader>h', ':wincmd h<CR>', { noremap = true, sil
 vim.api.nvim_set_keymap('n', '<leader>l', ':wincmd l<CR>', { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>c", "0f-rx:w<CR>")
+vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { desc = "Toggles local troubleshoot"})

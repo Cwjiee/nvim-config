@@ -32,6 +32,8 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'rcarriga/nvim-notify'
   use 'christoomey/vim-tmux-navigator'
+  use 'mfussenegger/nvim-jdtls'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use({
     "stevearc/oil.nvim",
     config = function()
